@@ -1,0 +1,20 @@
+<h4 class="display-4">Update department</h4>
+<hr>
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <label>Name</label>
+    <input name="firstname" #firstname="ngModel" [(ngModel)]="formData.name" type="text">
+  </div>
+
+  <div class="form-group">
+    <label>Description</label>
+    <input name="description" #description="ngModel" [(ngModel)]="formData.description" type="text">
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark" (click)="AddDepartment()">
+      <i class="fa fa-database"></i> Submit
+    </button>
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
+  </div>
+</form>
